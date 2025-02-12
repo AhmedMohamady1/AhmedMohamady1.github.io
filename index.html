@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Mohamady - Data Scientist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #265999;
+            --secondary-color: #d5ad36;
+            --dark-color: #4488bf;
+            --light-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--dark-color);
+            color: var(--light-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            background: rgba(44, 62, 80, 0.95);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 5% 4rem;
+            text-align: center;
+            position: relative;
+        }
+        .social-links a i {
+            font-size: 2rem; /* Adjust this value as needed */
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 1rem auto;
+            border: 3px solid var(--primary-color);
+            background: url('profile-img.png') center/cover;
+        }
+        .form-button {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            margin: 1rem 0;
+            background: var(--primary-color);
+            color: var(--light-color);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 5%;
+            scroll-margin-top: 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #34495e;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .skill-item {
+            background: #34495e;
+            padding: 1rem 2rem;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Language Proficiency */
+        .language-bar {
+            width: 100%;
+            height: 10px;
+            background: #2c3e50;
+            border-radius: 5px;
+            margin: 0.5rem 0;
+        }
+
+        .language-progress {
+            height: 100%;
+            background: var(--primary-color);
+            border-radius: 5px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: #34495e;
+            border: none;
+            border-radius: 5px;
+            color: var(--light-color);
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h2>AM</h2>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="profile-img"></div>
+        <h1>Ahmed Mohamady</h1>
+        <p>Junior Data Scientist</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/ahmed-mohamady-21a340309/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AhmedMohamady1" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <a href="Ahmed Mohamady - Junior Data Scientist.pdf" download class="download-btn">Download CV</a>
+    </section>
+
+    <!-- Add About Me Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3></h3>
+                <p>I am a Junior Data Scientist student with a strong foundation in Python, R, and machine learning, I am passionate about leveraging data to solve real-world problems and drive data-driven decision-making. My expertise includes data engineering, statistical analysis, and predictive modeling.</p>
+                <p>I am currently a Bachelor's student in Computing and Data Science Faculty in Alexandria University, with a CGPA of 3.53. This academic journey has shaped my technical skills and analytical mindset, equipping me to thrive in the dynamic field of data science.</p>
+            </div>
+        </div>
+    </section>    
+
+    <!-- Enhanced Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="card-container">
+            <!-- Titanic Project -->
+            <div class="card">
+                <div class="project-image" style="height: 200px; background: url('titanic.jpg') center/cover;"></div>
+                <h3>Titanic Survivors Analysis</h3>
+                <ul>
+                    <li>Preprocessed data using imputation and feature engineering</li>
+                    <li>Developed ML models (KNN, Naive Bayes, SVM, Decision Trees)</li>
+                    <li>Created visualizations with Matplotlib/Seaborn</li>
+                </ul>
+                <div class="skills-container" style="margin-top: 1rem;">
+                    <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                    <div class="skill-item">Scikit-learn</div>
+                </div>
+            </div>
+
+            <!-- Smart Weather Monitor -->
+            <div class="card">
+                <div class="project-image" style="height: 200px; background: url('iot.jpg') center/cover;"></div>
+                <h3>Smart Weather Monitor</h3>
+                <ul>
+                    <li>IoT system with real-time weather/safety sensors</li>
+                    <li>Implemented data visualization and audio warnings</li>
+                    <li>Grade A capstone project</li>
+                </ul>
+                <div class="skills-container" style="margin-top: 1rem;">
+                    <div class="skill-item"><i class="fas fa-microchip"></i> IoT</div>
+                    <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                </div>
+            </div>
+
+            <!-- Study Group Database -->
+            <div class="card">
+                <div class="project-image" style="height: 200px; background: url('erd.png') center/cover;"></div>
+                <h3>Study Group Database</h3>
+                <ul>
+                    <li>MySQL database for tracking group progress</li>
+                    <li>Stored member info, tasks, and tracks</li>
+                    <li>Python functions for ad-hoc queries</li>
+                </ul>
+                <div class="skills-container" style="margin-top: 1rem;">
+                    <div class="skill-item"><i class="fas fa-database"></i> MySQL</div>
+                    <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                </div>
+            </div>
+
+            <!-- Walmart Analysis -->
+            <div class="card">
+                <div class="project-image" style="height: 200px; background: url('retail.png') center/cover;"></div>
+                <h3>Walmart Customer Segmentation</h3>
+                <ul>
+                    <li>Exploratory data analysis of customer data</li>
+                    <li>Created histograms and distribution visualizations</li>
+                    <li>Developed customer segmentation models</li>
+                </ul>
+                <div class="skills-container" style="margin-top: 1rem;">
+                    <div class="skill-item">Pandas</div>
+                    <div class="skill-item">Seaborn</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modified form section -->
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <form class="contact-form" netlify>
+            <div class="form-group">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <textarea rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="form-button">
+                <button type="submit" class="download-btn">Send Message</button>
+            </div>
+        </form>
+    </section>
+
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Scroll to Top Button
+        window.addEventListener('scroll', () => {
+            const scrollBtn = document.querySelector('.scroll-top');
+            scrollBtn.style.opacity = window.scrollY > 500 ? '1' : '0';
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form Submission
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add form submission logic here
+            alert('Thank you for your message!');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
